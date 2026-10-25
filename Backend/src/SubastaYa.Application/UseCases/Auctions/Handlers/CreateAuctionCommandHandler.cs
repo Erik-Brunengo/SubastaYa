@@ -9,6 +9,7 @@ namespace SubastaYa.Application.UseCases.Auctions.Handlers
         private readonly IAuctionRepository _repository;
         private readonly IUnitOfWork _uow;
 
+        // Aquí el Handler está "solicitando" las dependencias
         public CreateAuctionCommandHandler(IAuctionRepository repository, IUnitOfWork uow)
         {
             _repository = repository;

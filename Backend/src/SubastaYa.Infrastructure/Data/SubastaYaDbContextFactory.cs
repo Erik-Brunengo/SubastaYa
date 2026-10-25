@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using System.IO;
 using System.Text.Json;
-using System;
 
 namespace SubastaYa.Infrastructure.Data
 {

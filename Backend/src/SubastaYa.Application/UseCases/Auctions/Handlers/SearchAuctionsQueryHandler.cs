@@ -1,7 +1,7 @@
-﻿using SubastaYa.Application.DTOs;
+using SubastaYa.Application.DTOs;
 using SubastaYa.Application.Interfaces;
 using SubastaYa.Application.UseCases.Auctions.Queries;
-using SubastaYa.Domain.Entities;
+
 
 namespace SubastaYa.Application.UseCases.Auctions.Handlers
 {

@@ -1,8 +1,7 @@
-﻿using SubastaYa.Application.Interfaces;
+using SubastaYa.Application.Interfaces;
+using SubastaYa.Application.UseCases.Auctions.Commands;
 
-namespace SubastaYa.Application.UseCases.Auctions.Commands;
-
-public record StartScheduledAuctionsCommand;
+namespace SubastaYa.Application.UseCases.Auctions.Handlers;
 
 public class StartScheduledAuctionsCommandHandler
 {

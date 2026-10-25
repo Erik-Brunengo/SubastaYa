@@ -49,7 +49,7 @@ public class AuctionsController : ControllerBase
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status422UnprocessableEntity)]
     public async Task<IActionResult> CreateAuction([FromBody] CreateAuctionDto dto)
     {
-        var vendedorId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        var vendedorId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!); 
         var subastaId = await _createHandler.Handle(new CreateAuctionCommand(vendedorId, dto.CategoriaId, dto.Titulo,
             dto.Descripcion, dto.UrlImagen, dto.PrecioBase, dto.IncrementoMinimo, dto.FechaInicio, dto.FechaFin));
         return CreatedAtAction(nameof(GetAuctionById), new { id = subastaId }, new { id = subastaId });

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using SubastaYa.Application.DTOs;
 using SubastaYa.Application.UseCases.Wallet.Commands;
@@ -63,10 +62,4 @@ public class WalletController : ControllerBase
         await _depositHandler.Handle(new DepositCommand(usuarioId, dto.Monto!.Value));
         return Created("/api/v1/wallets/transactions", new { mensaje = "Depósito realizado correctamente." });
     }
-}
-public sealed class CreateDepositRequestDto
-{
-    [Required(ErrorMessage = "El monto es obligatorio.")]
-    [Range(typeof(decimal), "1", "10000000", ErrorMessage = "El monto debe ser entre $1 y $10.000.000.")]
-    public decimal? Monto { get; init; }
 }

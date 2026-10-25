@@ -1,11 +1,10 @@
 using SubastaYa.Application.Interfaces;
+using SubastaYa.Application.UseCases.Auctions.Commands;
 using SubastaYa.Domain.Entities;
 using SubastaYa.Domain.Enums;
 using SubastaYa.Domain.Exceptions;
 
-namespace SubastaYa.Application.UseCases.Auctions.Commands;
-
-public record FinalizeAuctionCommand(int SubastaId);
+namespace SubastaYa.Application.UseCases.Auctions.Handlers;
 
 public class FinalizeAuctionCommandHandler
 {

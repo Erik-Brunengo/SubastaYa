@@ -1,6 +1,4 @@
-using System;
-
-namespace SubastaYa.Domain.Exceptions
+﻿namespace SubastaYa.Domain.Exceptions
 {
     public class UnauthorizedException : DomainException
     {

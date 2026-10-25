@@ -1,7 +1,4 @@
-using SubastaYa.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SubastaYa.Domain.Enums;
 
 namespace SubastaYa.Domain.Entities
 {
@@ -14,7 +11,7 @@ namespace SubastaYa.Domain.Entities
         public DateTime Fecha { get; init; } = DateTime.UtcNow;
         public int? SubastaId { get; init; }
 
-        // Navegación
+        // NavegaciÃ³n
         public Billetera Billetera { get; init; } = null!;
         public Subasta? Subasta { get; init; }
     }

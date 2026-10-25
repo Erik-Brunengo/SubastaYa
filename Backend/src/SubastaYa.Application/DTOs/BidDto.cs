@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SubastaYa.Application.DTOs
+﻿namespace SubastaYa.Application.DTOs
 {
     public record RegistrarPujaDto(
     int SubastaId,

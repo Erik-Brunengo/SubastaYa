@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.SignalR;
 using SubastaYa.Application.DTOs;
 using SubastaYa.Application.Interfaces;
-using SubastaYa.WebApi.Hubs;
+
 
 namespace SubastaYa.WebApi.Hubs
 {
     public class SignalRAuctionNotifier : IAuctionNotifier
     {
-        private readonly IHubContext<AuctionHub> _hubContext;
+        private readonly IHubContext<AuctionHub> _hubContext; //Recibe por inyección de dependencias. 
 
         public SignalRAuctionNotifier(IHubContext<AuctionHub> hubContext)
         {

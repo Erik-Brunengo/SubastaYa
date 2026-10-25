@@ -2,8 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using SubastaYa.Application.Interfaces;
 using SubastaYa.Application.UseCases.Auctions.Handlers;
-using SubastaYa.Application.UseCases.Auctions.Commands;
-using SubastaYa.Application.UseCases.Bids.Commands;
+
+using SubastaYa.Application.UseCases.Bids.Handlers;
 using SubastaYa.Application.UseCases.Auth.Handlers;
 using SubastaYa.Application.UseCases.Usuarios.Handlers;
 using SubastaYa.Application.UseCases.Wallet.Handlers;
@@ -67,7 +67,7 @@ if (!string.IsNullOrEmpty(jwtSecret))
 }
 
 // 2. Registros de Infraestructura
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 builder.Services.AddScoped<IWalletRepository, WalletRepository>();
@@ -81,6 +81,7 @@ builder.Services.AddScoped<IAuditService, AuditService>();
 builder.Services.AddScoped<IAuctionNotifier, SignalRAuctionNotifier>(); // ← NUEVA LÍNEA
 
 // 3. Registros de Aplicación (Auth, Subastas, Billetera y Pujas)
+//Esto es lo que .NET va a instanciar para el controller. No instancia nada que no este registrado.
 builder.Services.AddScoped<RegisterUserCommandHandler>();
 builder.Services.AddScoped<RegisterCommandHandler>();
 builder.Services.AddScoped<LoginQueryHandler>();

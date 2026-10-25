@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SubastaYa.Domain.Exceptions
+﻿namespace SubastaYa.Domain.Exceptions
 {
     public class DomainException : Exception
     {

@@ -1,35 +1,34 @@
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SubastaYa.Application.DTOs;
 
 public class CreateAuctionDto
 {
-    [Required(ErrorMessage = "El título es obligatorio.")]
-    [StringLength(200, MinimumLength = 3, ErrorMessage = "El título debe tener entre 3 y 200 caracteres.")]
+    [Required(ErrorMessage = "El tÃ­tulo es obligatorio.")]
+    [StringLength(200, MinimumLength = 3, ErrorMessage = "El tÃ­tulo debe tener entre 3 y 200 caracteres.")]
     public string Titulo { get; set; } = string.Empty;
 
-    [Required(ErrorMessage = "La descripción es obligatoria.")]
-    [StringLength(2000, MinimumLength = 10, ErrorMessage = "La descripción debe tener entre 10 y 2000 caracteres.")]
+    [Required(ErrorMessage = "La descripciÃ³n es obligatoria.")]
+    [StringLength(2000, MinimumLength = 10, ErrorMessage = "La descripciÃ³n debe tener entre 10 y 2000 caracteres.")]
     public string Descripcion { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "La URL de imagen es obligatoria.")]
-    [Url(ErrorMessage = "La URL de imagen no tiene un formato válido.")]
+    [Url(ErrorMessage = "La URL de imagen no tiene un formato vÃ¡lido.")]
     public string UrlImagen { get; set; } = string.Empty;
 
-    [Required(ErrorMessage = "La categoría es obligatoria.")]
-    [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar una categoría válida.")]
+    [Required(ErrorMessage = "La categorÃ­a es obligatoria.")]
+    [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar una categorÃ­a vÃ¡lida.")]
     public int CategoriaId { get; set; }
 
-    // El VendedorId en un caso real se tomará de Auth/Claims, por ahora lo pasamos.
+    // El VendedorId en un caso real se tomarÃ¡ de Auth/Claims, por ahora lo pasamos.
     public int VendedorId { get; set; }
 
     [Required(ErrorMessage = "El precio base es obligatorio.")]
     [Range(typeof(decimal), "0.01", "10000000", ErrorMessage = "El precio base debe ser mayor a cero y menor a $10.000.000.")]
     public decimal PrecioBase { get; set; }
 
-    [Required(ErrorMessage = "El incremento mínimo es obligatorio.")]
-    [Range(typeof(decimal), "0.01", "10000000", ErrorMessage = "El incremento mínimo debe ser mayor a cero.")]
+    [Required(ErrorMessage = "El incremento mÃ­nimo es obligatorio.")]
+    [Range(typeof(decimal), "0.01", "10000000", ErrorMessage = "El incremento mÃ­nimo debe ser mayor a cero.")]
     public decimal IncrementoMinimo { get; set; }
 
     [Required(ErrorMessage = "La fecha de inicio es obligatoria.")]

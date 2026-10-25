@@ -1,5 +1,4 @@
-using System;
-using SubastaYa.Domain.Enums;
+﻿using SubastaYa.Domain.Enums;
 
 namespace SubastaYa.Application.DTOs;
 
@@ -14,7 +13,7 @@ public class AuctionDto
     public decimal PrecioBase { get; set; }
     public decimal IncrementoMinimo { get; set; }
 
-    // Oferta más alta actual (si aplica)
+    // Oferta mÃ¡s alta actual (si aplica)
     public decimal OfertaMasAlta { get; set; }
     public int CantidadOfertas { get; set; }
 
@@ -23,6 +22,6 @@ public class AuctionDto
     public EstadoSubasta Estado { get; set; }
     public DateTime HoraServidor { get; set; }
 
-    // Lista de pujas simplificadas para evitar ciclos de serialización
+    // Lista de pujas simplificadas para evitar ciclos de serializaciÃ³n
     public List<PujaInfoDto> Pujas { get; set; } = new List<PujaInfoDto>();
 }

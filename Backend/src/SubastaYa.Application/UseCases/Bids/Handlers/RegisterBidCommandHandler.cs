@@ -1,10 +1,12 @@
 using SubastaYa.Application.DTOs;
 using SubastaYa.Application.Interfaces;
+using SubastaYa.Application.Mappings;
+using SubastaYa.Application.UseCases.Bids.Commands;
 using SubastaYa.Domain.Entities;
 using SubastaYa.Domain.Enums;
 using SubastaYa.Domain.Exceptions;
 
-namespace SubastaYa.Application.UseCases.Bids.Commands;
+namespace SubastaYa.Application.UseCases.Bids.Handlers;
 
 public class RegisterBidCommandHandler
 {
@@ -193,12 +195,8 @@ public class RegisterBidCommandHandler
             // Puja, billeteras, Ledger y auditoría se persisten juntos.
             await _unitOfWork.SaveChangesAsync();
 
-            response = new PujaResponseDto(
-                nuevaPuja.Id,
+            response = nuevaPuja.ToResponseDto(
                 subasta.Id,
-                command.UsuarioId,
-                command.Monto,
-                nuevaPuja.FechaPuja,
                 subasta.FechaFin,
                 antiSnipingActivado);
 

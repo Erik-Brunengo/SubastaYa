@@ -1,9 +1,7 @@
-using SubastaYa.Application.Interfaces;
+﻿using SubastaYa.Application.Interfaces;
 using SubastaYa.Application.UseCases.Wallet.Commands;
 using SubastaYa.Domain.Entities;
 using SubastaYa.Domain.Enums;
-using System;
-using System.Threading.Tasks;
 
 public class DepositCommandHandler
 {
@@ -48,7 +46,7 @@ public class DepositCommandHandler
         };
         await _ledger.AgregarAsync(transaccion);
 
-        // Registro de auditoría (preparación en el contexto de trabajo)
+        // Registro de auditorÃ­a (preparaciÃ³n en el contexto de trabajo)
         await _auditService.RegistrarEventoAsync(
             entidad: "Billetera",
             entidadId: billetera.Id,
@@ -66,7 +64,7 @@ public class DepositCommandHandler
             }
         );
 
-        // Confirmamos la transacción completa (Atomicidad)
+        // Confirmamos la transacciÃ³n completa (Atomicidad)
         await _uow.SaveChangesAsync();
     }
 }

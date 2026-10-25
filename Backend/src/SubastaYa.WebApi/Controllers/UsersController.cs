@@ -5,7 +5,7 @@ using SubastaYa.Application.UseCases.Auth.Commands;
 using SubastaYa.Application.UseCases.Auth.Handlers;
 using SubastaYa.Application.UseCases.Usuarios.Handlers;
 using SubastaYa.Application.UseCases.Usuarios.Queries;
-using SubastaYa.WebApi.Models;
+
 using System.Security.Claims;
 
 namespace SubastaYa.WebApi.Controllers;

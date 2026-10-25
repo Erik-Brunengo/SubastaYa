@@ -1,7 +1,8 @@
-﻿using NSubstitute;
+using NSubstitute;
 using SubastaYa.Application.DTOs;
 using SubastaYa.Application.Interfaces;
 using SubastaYa.Application.UseCases.Bids.Commands;
+using SubastaYa.Application.UseCases.Bids.Handlers;
 using SubastaYa.Domain.Entities;
 using SubastaYa.Domain.Exceptions;
 using Xunit;

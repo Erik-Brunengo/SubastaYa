@@ -29,10 +29,4 @@
     <None Include="C:\Users\eirk\source\repos\SubastaYa-Backend\src\SubastaYa.Infrastructure\.editorconfig" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-    <Folder Include="Persistence\Configurations\" />
-    <Folder Include="Persistence\Migrations\" />
-  </ItemGroup>
-
 </Project>

@@ -1,5 +1,6 @@
 using SubastaYa.Application.Interfaces;
 using SubastaYa.Application.UseCases.Auctions.Commands;
+using SubastaYa.Application.UseCases.Auctions.Handlers;
 
 namespace SubastaYa.WebApi.Workers
 {

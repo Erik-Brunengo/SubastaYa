@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SubastaYa.Application.UseCases.Auctions.Commands
+﻿namespace SubastaYa.Application.UseCases.Auctions.Commands
 {
     public record CreateAuctionCommand(
         int VendedorId,

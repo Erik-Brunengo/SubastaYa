@@ -1,6 +1,4 @@
-using System;
-
-namespace SubastaYa.Application.DTOs
+﻿namespace SubastaYa.Application.DTOs
 {
     public record PujaInfoDto(
         int Id,
