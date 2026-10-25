@@ -65,19 +65,19 @@ namespace SubastaYa.Infrastructure.Seed
                     var subastas = new List<Subasta>
                     {
                         // 0: Activa estándar
-                        new Subasta(usuarios[0].Id, categorias[3].Id, "Ford Fiesta", "Buen estado", "https://images.unsplash.com/photo-1552519507-da3b142c6e3d", 15000m, 500m, DateTime.UtcNow.AddMinutes(25)),
+                        new Subasta(usuarios[0].Id, categorias[3].Id, "Ford Fiesta", "Buen estado", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Ford_Fiesta_ST-Line_%28VII%2C_Facelift%29_%E2%80%93_f_30012023.jpg/960px-Ford_Fiesta_ST-Line_%28VII%2C_Facelift%29_%E2%80%93_f_30012023.jpg", 15000m, 500m, DateTime.UtcNow.AddMinutes(25)),
                             
                         // 1: Activa crítica (anti-sniping)
-                        new Subasta(usuarios[0].Id, categorias[0].Id, "Laptop Gamer", "Casi nueva", "https://images.unsplash.com/photo-1550745165-9bc0b252726f", 80000m, 1000m, DateTime.UtcNow.AddSeconds(90)),
+                        new Subasta(usuarios[0].Id, categorias[0].Id, "Laptop Gamer", "Casi nueva", "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80", 80000m, 1000m, DateTime.UtcNow.AddSeconds(90)),
                             
                         // 2: Próxima (Programada +24 hs)
-                        new Subasta(usuarios[0].Id, categorias[1].Id, "Reloj Antiguo", "Siglo XIX", "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f", 50000m, 2000m, DateTime.UtcNow.AddHours(48)),
+                        new Subasta(usuarios[0].Id, categorias[1].Id, "Reloj Antiguo", "Siglo XIX", "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?auto=format&fit=crop&w=800&q=80", 50000m, 2000m, DateTime.UtcNow.AddHours(48)),
                             
                         // 3: Vencida con ganador
-                        new Subasta(usuarios[0].Id, categorias[2].Id, "Chaqueta de Cuero Vintage", "Edición limitada", "https://fund.ar/wp-content/uploads/2023/12/pexels-rdne-stock-project-5698851-scaled.jpg", 10000m, 1000m, DateTime.UtcNow.AddMinutes(10)),
+                        new Subasta(usuarios[0].Id, categorias[2].Id, "Chaqueta de Cuero Vintage", "Edición limitada", "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80", 10000m, 1000m, DateTime.UtcNow.AddMinutes(10)),
                             
                         // 4: Vencida desierta
-                        new Subasta(usuarios[0].Id, categorias[0].Id, "Auriculares In-Ear", "Inalámbricos", "https://images.unsplash.com/photo-1550745165-9bc0b252726f", 5000m, 100m, DateTime.UtcNow.AddMinutes(10))
+                        new Subasta(usuarios[0].Id, categorias[0].Id, "Auriculares In-Ear", "Inalámbricos", "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80", 5000m, 100m, DateTime.UtcNow.AddMinutes(10))
                     };
 
                     context.Subastas.AddRange(subastas);
