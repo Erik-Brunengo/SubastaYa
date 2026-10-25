@@ -28,6 +28,28 @@
 
 ---
 
+## Vista Previa de la Aplicación
+
+### 1. Catálogo y Exploración de Subastas
+![Catálogo de Subastas](docs/screenshots/catalogo.png)
+
+### 2. Sala de Subasta en Vivo (Live Bidding Room & Extensión Anti-Sniping +2:00)
+![Sala de Subasta en Vivo](docs/screenshots/sala-en-vivo.png)
+
+### 3. Billetera Virtual (Garantía / Escrow y Libro Mayor Contable)
+![Billetera Virtual](docs/screenshots/billetera.png)
+
+### 4. Documentación Interactiva OpenAPI (Swagger UI)
+<details>
+<summary><b>Ver captura completa de los Endpoints y Schemas en Swagger UI</b></summary>
+<br>
+
+![Swagger UI](docs/screenshots/swagger.png)
+
+</details>
+
+---
+
 ## Arquitectura del Sistema (Clean Architecture + CQRS)
 
 La solución está dividida en **4 capas desacopladas** siguiendo el Principio de Inversión de Dependencias (DIP):
