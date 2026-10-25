@@ -67,7 +67,7 @@ if (!string.IsNullOrEmpty(jwtSecret))
 }
 
 // 2. Registros de Infraestructura
-builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 builder.Services.AddScoped<IWalletRepository, WalletRepository>();
