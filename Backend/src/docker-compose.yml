@@ -10,7 +10,7 @@ services:
       MYSQL_USER: subastaya_user
       MYSQL_PASSWORD: subastaya_password
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysqldata:/var/lib/mysql
 

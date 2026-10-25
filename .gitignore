@@ -480,3 +480,9 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+
+# Archivos locales de desarrollo y notas de catedra
+**/appsettings.Development.json
+AGENTS.md
+PROMPTS.md
